@@ -744,9 +744,9 @@ function! <SID>FindOrCreateBuffer(fileName, doSplit, findSimilar)
      else
         silent! execute ":e".bang." " . FILENAME
      endif
-     if (v:errmsg != "")
-        echo v:errmsg
-     endif
+     "if (v:errmsg != "")
+     "   echo v:errmsg
+     "endif
   else
 
      " Find the correct tab corresponding to the existing buffer
@@ -789,9 +789,9 @@ function! <SID>FindOrCreateBuffer(fileName, doSplit, findSimilar)
         else
            silent! execute ":buffer".bang." " . FILENAME
         endif
-        if (v:errmsg != "")
-           echo v:errmsg
-        endif
+        "if (v:errmsg != "")
+        "   echo v:errmsg
+        "endif
      else
         " Buffer is already in a window so switch to the window
         execute bufWindow."wincmd w"
@@ -807,9 +807,9 @@ function! <SID>FindOrCreateBuffer(fileName, doSplit, findSimilar)
            else
               silent! execute ":e".bang." " . FILENAME
            endif
-           if (v:errmsg != "")
-              echo v:errmsg
-           endif
+           "if (v:errmsg != "")
+           "   echo v:errmsg
+           "endif
         endif
      endif
   endif
